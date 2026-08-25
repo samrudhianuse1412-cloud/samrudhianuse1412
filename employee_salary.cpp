@@ -4,18 +4,18 @@ using namespace std;
 class Employee
 {
     int employee_id;
-    string branch;
+    string name;
     string designation;
     float basic_salary;
 
 public:
-    void inputData()
+    void getData()
     {
         cout << "Enter Employee ID: ";
         cin >> employee_id;
 
-        cout << "Enter Branch: ";
-        cin >> branch;
+        cout << "Enter Empioyee Name: ";
+        cin >> name;
 
         cout << "Enter Designation: ";
         cin >> designation;
@@ -24,13 +24,18 @@ public:
         cin >> basic_salary;
     }
 
-    void calculateSalary()
+    void putdata()
     {
         cout << "\nEmployee Details" << endl;
         cout << "Employee ID: " << employee_id << endl;
-        cout << "Branch: " << branch << endl;
+        cout << "Name: " << name << endl;
         cout << "Designation: " << designation << endl;
         cout << "Basic Salary: " << basic_salary << endl;
+    }
+    void calculatedata()
+    {
+        float tax =basic_salary*0.07;
+        cout <<"tax=" << tax << endl;
     }
 };
 
@@ -38,8 +43,9 @@ int main()
 {
     Employee e;
 
-    e.inputData();
-    e.calculateSalary();
+    e.getData();
+    e.putdata();
+    e.calculatedata();
 
     return 0;
 }
